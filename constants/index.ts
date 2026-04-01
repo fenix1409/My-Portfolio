@@ -256,7 +256,16 @@ export const OTHER_SKILL = [
   },
 ] as const;
 
-export const PROJECTS = [
+export type Project = {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  github?: string;
+  tools: string[];
+};
+
+export const PROJECTS: Project[] = [
   {
     title: "Al-Muamalat",
     description:
@@ -319,7 +328,7 @@ export const PROJECTS = [
     github: "https://github.com/fenix1409/Saas-AI",
     tools: ["Next.js", "Supabase", "Clerk Auth", "TypeScript", "Tailwind CSS", "Sentrty", "VAPI Voice AI", "OpenAI", "Shadcn UI"],
   },
-] as const;
+];
 
 export const FOOTER_DATA = [
   {
